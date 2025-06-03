@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-qml$36)1mu34j($^(=g_sl6r@(wnn^_pd(w18t#-y8pcc774i2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
