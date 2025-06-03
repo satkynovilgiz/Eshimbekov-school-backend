@@ -59,7 +59,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Разрешённые источники для CORS (AJAX с фронтенда)
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # твой фронтенд во время разработки
+    "http://localhost:3000",
+"https://eshimbekov-school.vercel.app",
+    # твой фронтенд во время разработки
 ]
 
 # Доверенные источники для CSRF (твой хост на Railway)
