@@ -29,7 +29,9 @@ ALLOWED_HOSTS = ['*']  # В продакшене лучше указать ко�
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS =[
+    'contact',
+'gallery',
     'corsheaders',
     'teachers',
     'banner',
@@ -64,7 +66,6 @@ CORS_ALLOWED_ORIGINS = [
     # твой фронтенд во время разработки
 ]
 
-# Доверенные источники для CSRF (твой хост на Railway)
 CSRF_TRUSTED_ORIGINS = [
     "https://eshimbekov-school-backend-production-27d6.up.railway.app",
 ]
@@ -119,11 +120,20 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Internationalization
 LANGUAGE_CODE = 'en-us'
 
+APPEND_SLASH = True
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
 USE_TZ = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'satkynovilgiz008@gmail.com'
+EMAIL_HOST_PASSWORD = 'okhh vawj qkvv elfr'
 
 
 # Default primary key field type
