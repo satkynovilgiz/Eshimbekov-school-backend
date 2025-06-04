@@ -3,6 +3,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail
 import json
 
+
+# contact sent to email
 @csrf_exempt
 def send_contact(request):
     if request.method == 'POST':
@@ -26,3 +28,4 @@ def send_contact(request):
             return JsonResponse({'error': str(e)}, status=500)
 
     return JsonResponse({'error': 'Неверный метод'}, status=405)
+
