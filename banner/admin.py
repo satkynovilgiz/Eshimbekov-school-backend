@@ -5,3 +5,9 @@ from .models import Banner
 class BannerAdmin(admin.ModelAdmin):
     list_display = ('title', 'button_text')
     search_fields = ('title',)
+
+    def has_add_permission(self, request):
+        # Разрешаем добавить только если нет ни одной записи
+        if Banner.objects.count() >= 1:
+            return False
+        return super().has_add_permission(request)
