@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['*']  # В продакшене лучше указать ко�
 # Application definition
 
 INSTALLED_APPS =[
+    'aboutschool',
     'contact',
 'gallery',
     'corsheaders',
@@ -57,6 +58,12 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.TokenAuthentication'],
+}
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Разрешённые источники для CORS (AJAX с фронтенда)
@@ -88,6 +95,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'eshimbekov.wsgi.application'
+
+
 
 
 # Database

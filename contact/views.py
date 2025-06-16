@@ -20,8 +20,8 @@ def send_contact(request):
             send_mail(
                 subject=f'Новое сообщение от {name}',
                 message=f'Почта: {email}\n\nСообщение:\n{message}',
-                from_email='ilgizzsatkynov@gmail.com',
-                recipient_list=['ilgizzsatkynov@gmail.com'],
+                from_email='satkynovilgiz008@gmail.com',
+                recipient_list=['satkynovilgiz008@gmail.com'],
             )
             return JsonResponse({'success': 'Сообщение отправлено'})
         except Exception as e:

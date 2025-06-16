@@ -8,6 +8,7 @@ from django.http import JsonResponse
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/news/', include('news.urls')),
+    path('api/about/', include('aboutschool.urls')),
     path('api/teachers/', include('teachers.urls')),
     path('api/gallery/', include('gallery.urls')),
     path('api/contact/', include('contact.urls')),
