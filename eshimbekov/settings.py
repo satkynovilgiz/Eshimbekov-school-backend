@@ -73,9 +73,6 @@ CORS_ALLOWED_ORIGINS = [
     # твой фронтенд во время разработки
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://eshimbekov-school-backend-production-27d6.up.railway.app",
-]
 
 ROOT_URLCONF = 'eshimbekov.urls'
 
@@ -137,6 +134,9 @@ USE_I18N = True
 
 USE_TZ = True
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://eshimbekov-school-backend.onrender.com",
+]
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
