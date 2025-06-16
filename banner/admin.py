@@ -7,6 +7,9 @@ class BannerAdmin(admin.ModelAdmin):
     search_fields = ('title',)
 
     def has_add_permission(self, request):
-        if Banner.objects.count() >= 1:
-            return False
-        return super().has_add_permission(request)
+        # Разрешить добавление, только если нет ни одного баннера
+        return not Banner.objects.exists()
+
+    def has_delete_permission(self, request, obj=None):
+        # Полностью запретить удаление баннера
+        return False
