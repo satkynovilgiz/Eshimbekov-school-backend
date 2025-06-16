@@ -136,6 +136,7 @@ USE_TZ = True
 
 CSRF_TRUSTED_ORIGINS = [
     "https://eshimbekov-school-backend.onrender.com",
+    "https://eshimbekov-school.vercel.app",  # frontend
 ]
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
