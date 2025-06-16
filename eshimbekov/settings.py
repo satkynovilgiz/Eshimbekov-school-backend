@@ -66,13 +66,11 @@ REST_FRAMEWORK = {
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Разрешённые источники для CORS (AJAX с фронтенда)
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-"https://eshimbekov-school.vercel.app",
-    # твой фронтенд во время разработки
+    "https://eshimbekov-school.vercel.app",
+    "https://eshimbekov-school-backend.onrender.com",
 ]
-
 
 ROOT_URLCONF = 'eshimbekov.urls'
 
