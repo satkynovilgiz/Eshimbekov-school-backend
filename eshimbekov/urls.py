@@ -12,6 +12,7 @@ urlpatterns = [
     path('api/teachers/', include('teachers.urls')),
     path('api/gallery/', include('gallery.urls')),
     path('api/contact/', include('contact.urls')),
+    path('api/videos/', include('videos.urls')),
     path('api/banners/', include('banner.urls')),
     path('media/<path:path>/', serve, {'document_root': settings.MEDIA_ROOT}),
     path('', lambda request: JsonResponse({"message": "Welcome to Eshimbekov School API"})),

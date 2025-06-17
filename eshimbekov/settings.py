@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['*']  # В продакшене лучше указать ко�
 # Application definition
 
 INSTALLED_APPS =[
+    'videos',
     'aboutschool',
     'contact',
 'gallery',
